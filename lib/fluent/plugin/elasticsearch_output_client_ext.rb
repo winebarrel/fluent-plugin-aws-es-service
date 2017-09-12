@@ -9,8 +9,8 @@ module ElasticsearchOutputClientExt
     mod.config_param :credentials_provider, :hash, default: nil
   end
 
-  # from https://github.com/winebarrel/fluent-plugin-elasticsearch/blob/v1.9.6/lib/fluent/plugin/out_elasticsearch.rb#L144
   # Copyright 2017 Uken Studios, Inc.
+  # https://github.com/uken/fluent-plugin-elasticsearch/blob/v1.9.6/lib/fluent/plugin/out_elasticsearch.rb#L144
   def client
     @_es ||= begin
       excon_options = { client_key: @client_key, client_cert: @client_cert, client_key_pass: @client_key_pass }
